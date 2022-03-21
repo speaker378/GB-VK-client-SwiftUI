@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		201298BB27E4AC2D005FC101 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298BA27E4AC2D005FC101 /* PersonCell.swift */; };
 		201298BD27E4D021005FC101 /* CommunityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298BC27E4D021005FC101 /* CommunityCell.swift */; };
+		201298BF27E89793005FC101 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298BE27E89793005FC101 /* AvatarView.swift */; };
 		206F0C3527DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0C3427DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift */; };
 		206F0C3927DE4AC90055BF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 206F0C3827DE4AC90055BF0D /* Assets.xcassets */; };
 		206F0C3C27DE4AC90055BF0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 206F0C3B27DE4AC90055BF0D /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		201298BA27E4AC2D005FC101 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		201298BC27E4D021005FC101 /* CommunityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCell.swift; sourceTree = "<group>"; };
+		201298BE27E89793005FC101 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		206F0C3127DE4AC90055BF0D /* GB VK client SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GB VK client SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		206F0C3427DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_VK_client_SwiftUIApp.swift; sourceTree = "<group>"; };
 		206F0C3827DE4AC90055BF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				206F0C3427DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift */,
 				201298BA27E4AC2D005FC101 /* PersonCell.swift */,
 				201298BC27E4D021005FC101 /* CommunityCell.swift */,
+				201298BE27E89793005FC101 /* AvatarView.swift */,
 				206F0C4327DE4DD40055BF0D /* LoginScreen */,
 				206F0C4227DE4DB20055BF0D /* Extensions */,
 				206F0C3A27DE4AC90055BF0D /* Preview Content */,
@@ -167,6 +170,7 @@
 			files = (
 				206F0C4927DE4E4D0055BF0D /* LoginScreenView.swift in Sources */,
 				201298BB27E4AC2D005FC101 /* PersonCell.swift in Sources */,
+				201298BF27E89793005FC101 /* AvatarView.swift in Sources */,
 				206F0C4527DE4E050055BF0D /* ExtensionView.swift in Sources */,
 				206F0C4727DE4E2B0055BF0D /* ExtensionUIApplication.swift in Sources */,
 				206F0C3527DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift in Sources */,

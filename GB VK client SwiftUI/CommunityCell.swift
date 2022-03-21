@@ -16,15 +16,7 @@ struct CommunityCell: View {
                 .opacity(0.35)
             
             HStack(spacing: 16) {
-                AsyncImage(url: url) { image in
-                    image
-                        .resizable()
-                        .scaledToFill()
-                } placeholder: { ProgressView() }
-                    .frame(width: 80, height: 80)
-                    .clipShape(Circle())
-                    .background(Circle().fill(Color.white))
-                    .shadow(radius: 4, x: -4, y: 4)
+                AvatarView(url: url)
                     .padding(.leading, 8)
                     .padding(.vertical, 10)
                 
