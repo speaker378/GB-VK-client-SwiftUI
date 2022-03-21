@@ -25,10 +25,7 @@ struct PersonCell: View {
                 
                 Spacer()
                 
-                Circle()
-                    .frame(width: 10, height: 10)
-                    .overlay(Color.green)
-                    .clipShape(Circle())
+                OnlineStatusView { Circle() }
                     .padding(.horizontal)
                     .padding(.bottom, 56)
             }
@@ -42,5 +39,18 @@ struct PersonCell: View {
 struct PersonCell_Previews: PreviewProvider {
     static var previews: some View {
         PersonCell()
+    }
+}
+
+struct OnlineStatusView <Content: Shape>: View {
+    let content: Content
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
+    }
+    var body: some View {
+        content
+            .frame(width: 10, height: 10)
+            .overlay(Color.green)
+            .clipShape(Circle())
     }
 }
