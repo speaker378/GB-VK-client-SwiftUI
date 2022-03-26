@@ -1,5 +1,5 @@
 //
-//  CommunityCell.swift
+//  GroupsRow.swift
 //  GB VK client SwiftUI
 //
 //  Created by Сергей Черных on 18.03.2022.
@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct CommunityCell: View {
+struct GroupsRow: View {
+    let group: Group
     let url = URL(string: "https://picsum.photos/200")
     var body: some View {
         ZStack {
@@ -20,20 +21,19 @@ struct CommunityCell: View {
                     .padding(.leading, 8)
                     .padding(.vertical, 10)
                 
-                Text("Swift language")
+                Text("\(group.name)")
                     .font(.system(size: 22))
                 Spacer()
             }
             .background()
-            .cornerRadius(18)
-            .padding(.horizontal, 12)
         }
     }
 }
 
-struct CommunityCell_Previews: PreviewProvider {
+struct GroupsRow_Previews: PreviewProvider {
+    static let group = Group(id: 0, name: "SimpleVeryLongName", avatar: Image(systemName: ""))
     static var previews: some View {
-        CommunityCell()
+        GroupsRow(group: group)
     }
 }
 

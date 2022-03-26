@@ -1,5 +1,5 @@
 //
-//  LoginScreenView.swift
+//  LoginView.swift
 //  GB VK client SwiftUI
 //
 //  Created by Сергей Черных on 13.03.2022.
@@ -8,17 +8,30 @@
 import SwiftUI
 import Combine
 
-struct LoginScreenView: View {
+struct LoginView: View {
     @State private var compactLayout = false
+    @State private var showingAlert = false
+    @State private var login = "admin"
+    @State private var password = "admin"
+    @Binding var isUserAuth: Bool
     private let keyboardIsOnPublisher = Publishers.Merge(
         NotificationCenter.default.publisher(
             for: UIResponder.keyboardWillShowNotification)
-            .map { _ in true },
+        .map { _ in true },
         NotificationCenter.default.publisher(
             for: UIResponder.keyboardWillHideNotification)
-            .map { _ in false })
+        .map { _ in false })
         .removeDuplicates()
-
+    
+    private func checkLogin() {
+        if login == "admin" && password == "admin" {
+            isUserAuth = true
+        }
+        else {
+            showingAlert = true
+        }
+    }
+    
     var body: some View {
         ZStack {
             Color("vk_blue")
@@ -26,46 +39,46 @@ struct LoginScreenView: View {
                 .onTapGesture {
                     UIApplication.shared.endEditing()
                 }
-
+            
             VStack {
                 LogoImage()
                     .padding(.top, 88)
-
+                
                 VStack {
                     VStack(spacing: 24) {
-                        LoginTextField()
-                        PasswordTextField()
+                        LoginTextField(login: $login)
+                        PasswordTextField(password: $password)
                     }
                     .padding([.leading, .trailing], 44)
-                    .padding(.top, (compactLayout ? 20 : 120))
-
+                    .padding(.top, (compactLayout ? 8 : 120))
+                    
                     HStack {
-                        ForgotButton()
+                        forgotButton
                         Spacer()
                     }
                     .padding(.leading, 44)
                 }
-
-                LoginButton()
-                    .padding(.top, (compactLayout ? 12 : 66))
-
+                
+                loginButton
+                    .padding(.top, (compactLayout ? 8 : 66))
+                
                 if !compactLayout {
                     Spacer()
                 }
-                RegisterButton()
+                registerButton
+                    .padding(.bottom, 8)
             }
             .onReceive(keyboardIsOnPublisher) { isKeyboardOn in withAnimation(Animation.default) {
                 self.compactLayout = isKeyboardOn
-
             }
             }
         }
     }
 }
 
-struct LoginScreen_Previews: PreviewProvider {
+struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginScreenView()
+        LoginView(isUserAuth: .constant(false ))
     }
 }
 
@@ -81,7 +94,7 @@ struct LogoImage: View {
 }
 
 struct LoginTextField: View {
-    @State private var login = ""
+    @Binding var login: String
     var body: some View {
         TextField("", text: $login)
             .placeholder(when: login.isEmpty) {
@@ -94,6 +107,7 @@ struct LoginTextField: View {
                     ))
             }
             .disableAutocorrection(true)
+            .textInputAutocapitalization(.never)
             .frame(minHeight: 44)
             .background(Color("vk_blue"))
             .cornerRadius(.greatestFiniteMagnitude)
@@ -106,7 +120,7 @@ struct LoginTextField: View {
 }
 
 struct PasswordTextField: View {
-    @State private var password = ""
+    @Binding var password: String
     var body: some View {
         SecureField("", text: $password)
             .placeholder(when: password.isEmpty) {
@@ -129,9 +143,9 @@ struct PasswordTextField: View {
     }
 }
 
-struct LoginButton: View {
-    var body: some View {
-        Button(action: {}) {
+extension LoginView {
+    var loginButton: some View {
+        Button(action: checkLogin) {
             HStack {
                 Text("Войти")
             }
@@ -142,11 +156,16 @@ struct LoginButton: View {
             .cornerRadius(.greatestFiniteMagnitude)
             .opacity(0.9)
         }
+        .alert("Ошибка", isPresented: $showingAlert) {
+            EmptyView()
+        } message: {
+            Text("Неверный логин или пароль")
+        }
     }
 }
 
-struct RegisterButton: View {
-    var body: some View {
+extension LoginView {
+    var registerButton: some View {
         Button("Зарегестрироваться", action: {})
             .foregroundColor(.white)
             .opacity(0.9)
@@ -154,8 +173,8 @@ struct RegisterButton: View {
     }
 }
 
-struct ForgotButton: View {
-    var body: some View {
+extension LoginView {
+    var forgotButton: some View {
         HStack {
             Button("Забыли?", action: {})
                 .foregroundColor(.white)

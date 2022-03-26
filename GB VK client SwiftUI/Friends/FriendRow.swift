@@ -1,5 +1,5 @@
 //
-//  PersonCell.swift
+//  FriendRow.swift
 //  GB VK client SwiftUI
 //
 //  Created by Сергей Черных on 18.03.2022.
@@ -7,38 +7,32 @@
 
 import SwiftUI
 
-struct PersonCell: View {
+struct FriendRow: View {
+    let friend: Friend
     let url = URL(string: "https://picsum.photos/200")
     var body: some View {
-        ZStack {
-            Color.gray
-                .ignoresSafeArea()
-                .opacity(0.35)
-            
             HStack(spacing: 16) {
                 AvatarView(url: url)
-                    .padding(.leading, 8)
                     .padding(.vertical, 10)
                 
-                Text("James Bond")
-                    .font(.system(size: 22))
+                Text("\(friend.firstName) \(friend.lastName)")
+                    .font(.system(size: 20))
                 
                 Spacer()
                 
                 OnlineStatusView { Circle() }
-                    .padding(.horizontal)
                     .padding(.bottom, 56)
             }
             .background()
-            .cornerRadius(18)
-            .padding(.horizontal, 12)
-        }
     }
 }
 
-struct PersonCell_Previews: PreviewProvider {
+struct FriendRow_Previews: PreviewProvider {
+    static let friend: Friend = Friend(id: 0, firstName: "LongFirstName", lastName: "LongLasttName", avatar: Image(systemName: ""))
     static var previews: some View {
-        PersonCell()
+        List {
+            FriendRow(friend: friend)
+        }
     }
 }
 
