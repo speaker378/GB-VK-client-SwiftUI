@@ -42,7 +42,7 @@ struct PersonCell_Previews: PreviewProvider {
     }
 }
 
-struct OnlineStatusView <Content: Shape>: View {
+struct OnlineStatusView<Content: Shape>: View {
     let content: Content
     init(@ViewBuilder content: () -> Content) {
         self.content = content()
