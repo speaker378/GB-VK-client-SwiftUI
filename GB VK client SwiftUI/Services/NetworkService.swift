@@ -46,6 +46,26 @@ class NetworkService {
         }
     }
     
+    // MARK: Photos
+    func getPhotos(userId: Int, completion: @escaping ([Photo]) -> Void) {
+        let path = "/method/photos.getAll"
+        let params = [
+            "owner_id" : "\(userId)",
+            "extended" : "1",
+            "count" : "200",
+        ]
+        guard let url = url(from: path, params: params) else { return }
+        request(url: url) { json in
+            do {
+                let photos = try JSONDecoder()
+                    .decode(VKResponse<Photo>.self, from: json)
+                completion(photos.response.items)
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
     // MARK: Private
     private func url(from path: String, params: [String: String]) -> URL? {
         var components = URLComponents()
