@@ -24,7 +24,6 @@ struct FriendsView: View {
         }
         .onAppear { viewModel.fetch() }
         .listStyle(.plain)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

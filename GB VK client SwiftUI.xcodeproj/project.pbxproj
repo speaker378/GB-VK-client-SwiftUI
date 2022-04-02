@@ -26,8 +26,8 @@
 		20CFC21E27F85A1E002C9E50 /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC21D27F85A1E002C9E50 /* FriendViewModel.swift */; };
 		20CFC22027F85D17002C9E50 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC21F27F85D17002C9E50 /* NetworkService.swift */; };
 		20CFC22427F85E29002C9E50 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC22327F85E29002C9E50 /* FriendModel.swift */; };
-		20CFC22627F864D8002C9E50 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC22527F864D8002C9E50 /* Session.swift */; };
 		20CFC22827F8705B002C9E50 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC22727F8705B002C9E50 /* Response.swift */; };
+		20CFC22A27F8796E002C9E50 /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC22927F8796E002C9E50 /* VKLoginWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +50,8 @@
 		20CFC21D27F85A1E002C9E50 /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
 		20CFC21F27F85D17002C9E50 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		20CFC22327F85E29002C9E50 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
-		20CFC22527F864D8002C9E50 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		20CFC22727F8705B002C9E50 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		20CFC22927F8796E002C9E50 /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +157,7 @@
 		206F0C4327DE4DD40055BF0D /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				20CFC22927F8796E002C9E50 /* VKLoginWebView.swift */,
 				206F0C4827DE4E4D0055BF0D /* LoginView.swift */,
 			);
 			path = Login;
@@ -176,7 +177,6 @@
 				20CFC21D27F85A1E002C9E50 /* FriendViewModel.swift */,
 				20CFC22727F8705B002C9E50 /* Response.swift */,
 				20CFC22327F85E29002C9E50 /* FriendModel.swift */,
-				20CFC22527F864D8002C9E50 /* Session.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,10 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				206F0C4927DE4E4D0055BF0D /* LoginView.swift in Sources */,
-				20CFC22627F864D8002C9E50 /* Session.swift in Sources */,
 				201298BB27E4AC2D005FC101 /* FriendRow.swift in Sources */,
 				20CFC21E27F85A1E002C9E50 /* FriendViewModel.swift in Sources */,
 				20CFC22827F8705B002C9E50 /* Response.swift in Sources */,
+				20CFC22A27F8796E002C9E50 /* VKLoginWebView.swift in Sources */,
 				201298CE27F328D9005FC101 /* Gallery.swift in Sources */,
 				201298C827F316AA005FC101 /* GroupsView.swift in Sources */,
 				20CFC22427F85E29002C9E50 /* FriendModel.swift in Sources */,

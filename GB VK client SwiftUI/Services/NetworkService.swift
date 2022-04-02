@@ -38,7 +38,7 @@ class NetworkService {
         components.path = path
         components.queryItems = params.map { URLQueryItem(name: $0, value: $1) }
         components.queryItems! += [
-            URLQueryItem(name: "access_token", value: Session.shared.token),
+            URLQueryItem(name: "access_token", value: UserDefaults.standard.string(forKey: "vkToken")),
             URLQueryItem(name: "v", value: versionAPI),
         ]
         return components.url
