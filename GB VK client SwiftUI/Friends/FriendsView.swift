@@ -7,26 +7,22 @@
 
 import SwiftUI
 
-struct Friend: Identifiable {
-    let id: Int
-    let firstName: String
-    let lastName: String
-    let avatar: Image
-}
-
 struct FriendsView: View {
-    @State private var friends: [Friend] = [
-        Friend(id: 0, firstName: "Albus", lastName: "Damboldor", avatar: Image(systemName: "mail")),
-        Friend(id: 1, firstName: "Harry", lastName: "Potter", avatar: Image(systemName: "eye"))
-    ]
+    @ObservedObject var viewModel: FriendViewModel
+    
+    init(viewModel: FriendViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
-        List(friends) { friend in
+        List(viewModel.friends) { friend in
             NavigationLink {
                 Gallery(friend: friend)
             } label: {
                 FriendRow(friend: friend)
             }
         }
+        .onAppear { viewModel.fetch() }
         .listStyle(.plain)
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -35,7 +31,7 @@ struct FriendsView: View {
 struct FriendsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            FriendsView()
+            FriendsView(viewModel: FriendViewModel())
         }
     }
 }

@@ -22,7 +22,7 @@ struct MainView: View {
                 NewsFeedView()
                     .tabItem { Label("Новости", systemImage: "newspaper") }
                     .tag(Tabs.news)
-                FriendsView()
+                FriendsView(viewModel: FriendViewModel())
                     .tabItem { Label("Друзья", systemImage: "person") }
                     .tag(Tabs.friends)
                 GroupsView()

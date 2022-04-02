@@ -23,6 +23,11 @@
 		206F0C4527DE4E050055BF0D /* SwiftUI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0C4427DE4E050055BF0D /* SwiftUI+Extension.swift */; };
 		206F0C4727DE4E2B0055BF0D /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0C4627DE4E2B0055BF0D /* UIKit+Extension.swift */; };
 		206F0C4927DE4E4D0055BF0D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0C4827DE4E4D0055BF0D /* LoginView.swift */; };
+		20CFC21E27F85A1E002C9E50 /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC21D27F85A1E002C9E50 /* FriendViewModel.swift */; };
+		20CFC22027F85D17002C9E50 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC21F27F85D17002C9E50 /* NetworkService.swift */; };
+		20CFC22427F85E29002C9E50 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC22327F85E29002C9E50 /* FriendModel.swift */; };
+		20CFC22627F864D8002C9E50 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC22527F864D8002C9E50 /* Session.swift */; };
+		20CFC22827F8705B002C9E50 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC22727F8705B002C9E50 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		206F0C4427DE4E050055BF0D /* SwiftUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extension.swift"; sourceTree = "<group>"; };
 		206F0C4627DE4E2B0055BF0D /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
 		206F0C4827DE4E4D0055BF0D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		20CFC21D27F85A1E002C9E50 /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
+		20CFC21F27F85D17002C9E50 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		20CFC22327F85E29002C9E50 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		20CFC22527F864D8002C9E50 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		20CFC22727F8705B002C9E50 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +123,8 @@
 				206F0C3427DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift */,
 				201298C027EF57E9005FC101 /* AppView.swift */,
 				201298C527F31163005FC101 /* MainView.swift */,
+				20CFC22227F85D43002C9E50 /* Models */,
+				20CFC22127F85D24002C9E50 /* Services */,
 				206F0C4327DE4DD40055BF0D /* Login */,
 				201298CC27F31D35005FC101 /* News */,
 				201298C227EF7CD4005FC101 /* Friends */,
@@ -148,6 +160,25 @@
 				206F0C4827DE4E4D0055BF0D /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		20CFC22127F85D24002C9E50 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				20CFC21F27F85D17002C9E50 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		20CFC22227F85D43002C9E50 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20CFC21D27F85A1E002C9E50 /* FriendViewModel.swift */,
+				20CFC22727F8705B002C9E50 /* Response.swift */,
+				20CFC22327F85E29002C9E50 /* FriendModel.swift */,
+				20CFC22527F864D8002C9E50 /* Session.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,14 +258,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				206F0C4927DE4E4D0055BF0D /* LoginView.swift in Sources */,
+				20CFC22627F864D8002C9E50 /* Session.swift in Sources */,
 				201298BB27E4AC2D005FC101 /* FriendRow.swift in Sources */,
+				20CFC21E27F85A1E002C9E50 /* FriendViewModel.swift in Sources */,
+				20CFC22827F8705B002C9E50 /* Response.swift in Sources */,
 				201298CE27F328D9005FC101 /* Gallery.swift in Sources */,
 				201298C827F316AA005FC101 /* GroupsView.swift in Sources */,
+				20CFC22427F85E29002C9E50 /* FriendModel.swift in Sources */,
 				201298BF27E89793005FC101 /* AvatarView.swift in Sources */,
 				201298C427EF7CE8005FC101 /* FriendsView.swift in Sources */,
 				206F0C4527DE4E050055BF0D /* SwiftUI+Extension.swift in Sources */,
 				201298C127EF57E9005FC101 /* AppView.swift in Sources */,
 				206F0C4727DE4E2B0055BF0D /* UIKit+Extension.swift in Sources */,
+				20CFC22027F85D17002C9E50 /* NetworkService.swift in Sources */,
 				206F0C3527DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift in Sources */,
 				201298CB27F31C4D005FC101 /* NewsFeedView.swift in Sources */,
 				201298BD27E4D021005FC101 /* GroupsRow.swift in Sources */,

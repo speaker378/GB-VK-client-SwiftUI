@@ -41,7 +41,7 @@ struct Gallery: View {
 }
 
 struct Gallery_Previews: PreviewProvider {
-    static let friend: Friend = Friend(id: 0, firstName: "LongFirstName", lastName: "LongLasttName", avatar: Image(systemName: ""))
+    static let friend: Friend = Friend(id: 0, firstName: "FirstName", lastName: "LastName", avatarUrlString: "", networkStatus: 1, friendStatus: 0)
     static var previews: some View {
         Gallery(friend: friend)
     }
