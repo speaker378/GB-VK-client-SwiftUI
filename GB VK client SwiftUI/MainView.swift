@@ -25,7 +25,7 @@ struct MainView: View {
                 FriendsView(viewModel: FriendViewModel())
                     .tabItem { Label("Друзья", systemImage: "person") }
                     .tag(Tabs.friends)
-                GroupsView()
+                GroupsView(viewModel: GroupViewModel())
                     .tabItem { Label("Группы", systemImage: "person.3") }
                     .tag(Tabs.groups)
             }

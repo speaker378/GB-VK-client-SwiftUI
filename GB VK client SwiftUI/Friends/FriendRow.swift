@@ -10,10 +10,6 @@ import SwiftUI
 struct FriendRow: View {
     let friend: Friend
     
-    init(friend: Friend) {
-        self.friend = friend
-    }
-    
     var body: some View {
             HStack(spacing: 16) {
                 AvatarView(url: URL(string: friend.avatarUrlString))
