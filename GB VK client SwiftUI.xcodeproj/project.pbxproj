@@ -113,6 +113,20 @@
 			path = Gallery;
 			sourceTree = "<group>";
 		};
+		2036213027F97CF200932AC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				201298C027EF57E9005FC101 /* AppView.swift */,
+				201298C527F31163005FC101 /* MainView.swift */,
+				206F0C4327DE4DD40055BF0D /* Login */,
+				201298CC27F31D35005FC101 /* News */,
+				201298C227EF7CD4005FC101 /* Friends */,
+				201298C927F31736005FC101 /* Groups */,
+				201298CF27F328E0005FC101 /* Gallery */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		206F0C2827DE4AC80055BF0D = {
 			isa = PBXGroup;
 			children = (
@@ -133,15 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				206F0C3427DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift */,
-				201298C027EF57E9005FC101 /* AppView.swift */,
-				201298C527F31163005FC101 /* MainView.swift */,
+				2036213027F97CF200932AC0 /* Views */,
 				20CFC22227F85D43002C9E50 /* Models */,
 				20CFC22127F85D24002C9E50 /* Services */,
-				206F0C4327DE4DD40055BF0D /* Login */,
-				201298CC27F31D35005FC101 /* News */,
-				201298C227EF7CD4005FC101 /* Friends */,
-				201298C927F31736005FC101 /* Groups */,
-				201298CF27F328E0005FC101 /* Gallery */,
 				206F0C4227DE4DB20055BF0D /* Extensions */,
 				206F0C3A27DE4AC90055BF0D /* Preview Content */,
 				206F0C3827DE4AC90055BF0D /* Assets.xcassets */,
