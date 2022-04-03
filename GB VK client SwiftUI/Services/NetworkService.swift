@@ -66,6 +66,69 @@ class NetworkService {
         }
     }
     
+    // MARK: News
+    func getNewsfeed(startTime: Int? = nil,
+                     startFrom: String? = nil,
+                     completion: @escaping ([NewsModel], String?) -> Void)
+    {
+        let path = "/method/newsfeed.get"
+        var params = [
+            "filters" : "post",
+            "count" : "20"
+        ]
+        if startTime != nil { params["start_time"] = String(startTime!) }
+        if startFrom != nil { params["start_from"] = startFrom }
+        guard let url = url(from: path, params: params) else { return }
+        let request = URLRequest(url: url)
+        
+        let task = session.dataTask(with: request) { responseData, urlResponse, error in
+            guard let response = urlResponse as? HTTPURLResponse,
+                  (200...299).contains(response.statusCode),
+                  error == nil,
+                  let json = responseData
+            else { return completion([], nil) }
+        
+            let dispatchGroup = DispatchGroup()
+            var news = [NewsModel]()
+            var profiles: [Friend]?
+            var groups: [Group]?
+            var nextFrom: String? = nil
+            
+            do {
+                dispatchGroup.enter()
+                let response = try JSONDecoder()
+                    .decode(VKResponse<NewsModel>.self, from: json).response
+                nextFrom = response.nextFrom
+                news = response.items
+                profiles = response.profiles
+                groups = response.groups
+                dispatchGroup.leave()
+            } catch  {
+                dispatchGroup.leave()
+                print(error)
+            }
+            
+            for i in 0..<news.count {
+                DispatchQueue.global().async(group: dispatchGroup) {
+                    if news[i].sourceID < 0 {
+                        let group = groups?.first(where: { $0.id == -news[i].sourceID })
+                        news[i].avatarURL = group?.avatarUrlString
+                        news[i].creatorName = group?.name
+                    } else {
+                        let profile = profiles?.first(where: { $0.id == news[i].sourceID })
+                        news[i].avatarURL = profile?.avatarUrlString
+                        news[i].creatorName = profile?.firstName
+                    }
+                }
+            }
+            
+            dispatchGroup.notify(queue: .main) {
+                completion(news, nextFrom)
+            }
+        }
+        task.resume()
+    }
+    
     // MARK: Private
     private func url(from path: String, params: [String: String]) -> URL? {
         var components = URLComponents()

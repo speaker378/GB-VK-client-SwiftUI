@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct NewsFeedView: View {
+    @ObservedObject var viewModel: NewsViewModel
+    
+    init(viewModel: NewsViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
-        HStack {
-            VStack {
-                Image(systemName: "newspaper")
-                Text("text news")
-            }
+        List(viewModel.news) { news in
+            NewsRow(news: news)
+        }
+        .listStyle(.plain)
+        .onAppear {
+            viewModel.fetch()
         }
     }
 }
@@ -21,7 +28,7 @@ struct NewsFeedView: View {
 struct NewsFeedView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            NewsFeedView()
+            NewsFeedView(viewModel: NewsViewModel())
         }
     }
 }

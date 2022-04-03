@@ -12,8 +12,8 @@ class FriendViewModel: ObservableObject {
     private let networkService = NetworkService()
 
     func fetch() {
-        networkService.getFriends { data in
-            self.friends = data
+        networkService.getFriends { [weak self] data in
+            self?.friends = data
         }
     }
 }

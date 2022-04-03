@@ -13,9 +13,9 @@ class GroupViewModel: ObservableObject {
     internal let objectWillChange = ObjectWillChangePublisher()
     
     func fetch() {
-        networkService.getGroups { [self] data in
-            self.groups = data
-            objectWillChange.send()
+        networkService.getGroups { [weak self] data in
+            self?.groups = data
+            self?.objectWillChange.send()
         }
     }
 }

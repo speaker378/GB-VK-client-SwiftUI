@@ -12,8 +12,8 @@ class PhotoViewModel: ObservableObject {
     private let networkService = NetworkService()
     
     func fetch(userId: Int) {
-        networkService.getPhotos(userId: userId) { data in
-            self.photos = data
+        networkService.getPhotos(userId: userId) { [weak self] data in
+            self?.photos = data
         }
     }
 }

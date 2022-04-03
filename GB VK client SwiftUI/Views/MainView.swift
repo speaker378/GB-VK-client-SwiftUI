@@ -19,7 +19,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selectedTab) {
-                NewsFeedView()
+                NewsFeedView(viewModel: NewsViewModel())
                     .tabItem { Label("Новости", systemImage: "newspaper") }
                     .tag(Tabs.news)
                 FriendsView(viewModel: FriendViewModel())
