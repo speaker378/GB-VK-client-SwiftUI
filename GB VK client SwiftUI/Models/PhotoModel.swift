@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Photo: Codable, Identifiable {
+struct PhotoModel: Codable, Identifiable {
     let id: Int
     let ownerID: Int
     let sizes: [Size]

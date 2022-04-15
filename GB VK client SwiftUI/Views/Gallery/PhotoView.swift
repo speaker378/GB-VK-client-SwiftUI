@@ -9,13 +9,13 @@ import SwiftUI
 
 struct PhotoView: View, Identifiable {
     private let sizesByPriority: [SizeType] = [.x, .y, .z, .w, .r, .q, .p, .m, .o, .s]
-    var photo: Photo
+    var photo: PhotoModel
     var id = UUID()
     @State private var flipped: Bool
     
-    init(photo: Photo) {
+    init(photo: PhotoModel) {
         self.photo = photo
-        self.url = URL(string: Photo.findUrlInPhotoSizes(sizes: photo.sizes, sizesByPriority: sizesByPriority).src ?? "")
+        self.url = URL(string: PhotoModel.findUrlInPhotoSizes(sizes: photo.sizes, sizesByPriority: sizesByPriority).src ?? "")
         _flipped = State(initialValue: (photo.likes?.userLikes == 1 ? true : false))
     }
     
@@ -44,6 +44,7 @@ struct PhotoView: View, Identifiable {
                     .animation(.default, value: flipped)
                     .onTapGesture {
                         self.flipped.toggle()
+                        
                     }
             }
         }
@@ -51,7 +52,7 @@ struct PhotoView: View, Identifiable {
 }
 
 struct PhotoView_Preview: PreviewProvider {
-    static let photo = Photo(id: 0, ownerID: 0, sizes: [Size(urlString: "https://picsum.photos/200", width: 100, height: 100, type: .x)], likes: Likes(userLikes: 0, count: 21))
+    static let photo = PhotoModel(id: 0, ownerID: 0, sizes: [Size(urlString: "https://picsum.photos/200", width: 100, height: 100, type: .x)], likes: Likes(userLikes: 0, count: 21))
     static var previews: some View {
         PhotoView(photo: photo)
             .frame(width: 200, height: 200, alignment: .center)

@@ -8,7 +8,7 @@
 import Combine
 
 class PhotoViewModel: ObservableObject {
-    @Published var photos: [Photo] = []
+    @Published var photos: [PhotoModel] = []
     private let networkService = NetworkService()
     
     func fetch(userId: Int) {
