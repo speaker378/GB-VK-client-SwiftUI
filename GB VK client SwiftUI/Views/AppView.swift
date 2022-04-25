@@ -13,7 +13,8 @@ struct AppView: View {
     
     var body: some View {
         if isUserAuth || token != nil {
-            MainView()
+//            MainView()
+            TabBarCoordinatorView()
         } else {
 //            LoginView(isUserAuth: $isUserAuth)
             VKLoginWebView()
