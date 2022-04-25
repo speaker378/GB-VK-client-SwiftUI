@@ -8,28 +8,6 @@
 import SwiftUI
 import ASCollectionView
 
-struct PhotoView: View, Identifiable {
-    private let sizesByPriority: [SizeType] = [.x, .y, .z, .w, .r, .q, .p, .m, .o, .s]
-    var photo: Photo
-    var id = UUID()
-    
-    init(photo: Photo) {
-        self.photo = photo
-        self.url = URL(string: Photo.findUrlInPhotoSizes(sizes: photo.sizes, sizesByPriority: sizesByPriority).src ?? "")
-    }
-    
-    var url: URL?
-    
-    var body: some View {
-        AsyncImage(url: url) { image in
-            image
-                .resizable()
-                .scaledToFit()
-        } placeholder: { ProgressView() }
-            .frame(width: 100 , height: 100)
-    }
-}
-
 struct Gallery: View {
     @ObservedObject var viewModel: PhotoViewModel
     let friend: Friend

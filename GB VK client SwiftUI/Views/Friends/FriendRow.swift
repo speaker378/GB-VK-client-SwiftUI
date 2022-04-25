@@ -9,12 +9,24 @@ import SwiftUI
 
 struct FriendRow: View {
     let friend: Friend
+    @State private var scale: CGFloat = 1
     
     var body: some View {
-            HStack(spacing: 16) {
-                AvatarView(url: URL(string: friend.avatarUrlString))
-                    .padding(.vertical, 10)
-                
+        HStack(spacing: 16) {
+            AvatarView(url: URL(string: friend.avatarUrlString))
+                .padding(.vertical, 10)
+                .scaleEffect(scale)
+                .onTapGesture {
+                    withAnimation(
+                        Animation
+                        .interactiveSpring(
+                            response: 0.5,
+                            dampingFraction: 0.25,
+                            blendDuration: 0.75))
+                    { scale = 0.5 }
+                    scale = 1
+                }
+                    
                 Text("\(friend.firstName) \(friend.lastName)")
                     .font(.system(size: 20))
                 

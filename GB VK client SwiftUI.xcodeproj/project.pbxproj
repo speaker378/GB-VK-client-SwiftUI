@@ -37,6 +37,7 @@
 		20CFC22427F85E29002C9E50 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC22327F85E29002C9E50 /* FriendModel.swift */; };
 		20CFC22827F8705B002C9E50 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC22727F8705B002C9E50 /* Response.swift */; };
 		20CFC22A27F8796E002C9E50 /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CFC22927F8796E002C9E50 /* VKLoginWebView.swift */; };
+		20E3971427FF4B4200C8DAA5 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E3971327FF4B4200C8DAA5 /* PhotoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		20CFC22327F85E29002C9E50 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		20CFC22727F8705B002C9E50 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		20CFC22927F8796E002C9E50 /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
+		20E3971327FF4B4200C8DAA5 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				201298CD27F328D9005FC101 /* Gallery.swift */,
+				20E3971327FF4B4200C8DAA5 /* PhotoView.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				201298C127EF57E9005FC101 /* AppView.swift in Sources */,
 				206F0C4727DE4E2B0055BF0D /* UIKit+Extension.swift in Sources */,
 				20CFC22027F85D17002C9E50 /* NetworkService.swift in Sources */,
+				20E3971427FF4B4200C8DAA5 /* PhotoView.swift in Sources */,
 				206F0C3527DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift in Sources */,
 				201298CB27F31C4D005FC101 /* NewsFeedView.swift in Sources */,
 				201298BD27E4D021005FC101 /* GroupsRow.swift in Sources */,
