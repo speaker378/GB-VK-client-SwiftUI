@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GroupsRow: View {
     let group: Group
-    let url = URL(string: "https://picsum.photos/200")
+    
     var body: some View {
         ZStack {
             Color.gray
@@ -17,7 +17,7 @@ struct GroupsRow: View {
                 .opacity(0.35)
             
             HStack(spacing: 16) {
-                AvatarView(url: url)
+                AvatarView(url: URL(string: group.avatarUrlString))
                     .padding(.leading, 8)
                     .padding(.vertical, 10)
                 
@@ -31,7 +31,7 @@ struct GroupsRow: View {
 }
 
 struct GroupsRow_Previews: PreviewProvider {
-    static let group = Group(id: 0, name: "SimpleVeryLongName", avatar: Image(systemName: ""))
+    static let group = Group(id: 0, name: "GroupName", avatarUrlString: "")
     static var previews: some View {
         GroupsRow(group: group)
     }
