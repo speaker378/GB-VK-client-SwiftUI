@@ -1,11 +1,11 @@
 //
-//  ExtensionUIApplication.swift
+//  UIKit+Extension.swift
 //  GB VK client SwiftUI
 //
 //  Created by Сергей Черных on 13.03.2022.
 //
 
-import SwiftUI
+import UIKit
 
 extension UIApplication {
     func endEditing() {

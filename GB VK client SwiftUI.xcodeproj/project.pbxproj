@@ -7,22 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201298BB27E4AC2D005FC101 /* FriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298BA27E4AC2D005FC101 /* FriendRow.swift */; };
+		201298BD27E4D021005FC101 /* GroupsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298BC27E4D021005FC101 /* GroupsRow.swift */; };
+		201298BF27E89793005FC101 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298BE27E89793005FC101 /* AvatarView.swift */; };
+		201298C127EF57E9005FC101 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298C027EF57E9005FC101 /* AppView.swift */; };
+		201298C427EF7CE8005FC101 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298C327EF7CE8005FC101 /* FriendsView.swift */; };
+		201298C627F31163005FC101 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298C527F31163005FC101 /* MainView.swift */; };
+		201298C827F316AA005FC101 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298C727F316AA005FC101 /* GroupsView.swift */; };
+		201298CB27F31C4D005FC101 /* NewsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298CA27F31C4D005FC101 /* NewsFeedView.swift */; };
+		201298CE27F328D9005FC101 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201298CD27F328D9005FC101 /* Gallery.swift */; };
+		201298D227F32D10005FC101 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 201298D127F32D10005FC101 /* ASCollectionView */; };
 		206F0C3527DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0C3427DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift */; };
 		206F0C3927DE4AC90055BF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 206F0C3827DE4AC90055BF0D /* Assets.xcassets */; };
 		206F0C3C27DE4AC90055BF0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 206F0C3B27DE4AC90055BF0D /* Preview Assets.xcassets */; };
-		206F0C4527DE4E050055BF0D /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0C4427DE4E050055BF0D /* ExtensionView.swift */; };
-		206F0C4727DE4E2B0055BF0D /* ExtensionUIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0C4627DE4E2B0055BF0D /* ExtensionUIApplication.swift */; };
-		206F0C4927DE4E4D0055BF0D /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0C4827DE4E4D0055BF0D /* LoginScreenView.swift */; };
+		206F0C4527DE4E050055BF0D /* SwiftUI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0C4427DE4E050055BF0D /* SwiftUI+Extension.swift */; };
+		206F0C4727DE4E2B0055BF0D /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0C4627DE4E2B0055BF0D /* UIKit+Extension.swift */; };
+		206F0C4927DE4E4D0055BF0D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0C4827DE4E4D0055BF0D /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		201298BA27E4AC2D005FC101 /* FriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRow.swift; sourceTree = "<group>"; };
+		201298BC27E4D021005FC101 /* GroupsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsRow.swift; sourceTree = "<group>"; };
+		201298BE27E89793005FC101 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		201298C027EF57E9005FC101 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		201298C327EF7CE8005FC101 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		201298C527F31163005FC101 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		201298C727F316AA005FC101 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		201298CA27F31C4D005FC101 /* NewsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedView.swift; sourceTree = "<group>"; };
+		201298CD27F328D9005FC101 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		206F0C3127DE4AC90055BF0D /* GB VK client SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GB VK client SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		206F0C3427DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GB_VK_client_SwiftUIApp.swift; sourceTree = "<group>"; };
 		206F0C3827DE4AC90055BF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		206F0C3B27DE4AC90055BF0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		206F0C4427DE4E050055BF0D /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
-		206F0C4627DE4E2B0055BF0D /* ExtensionUIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIApplication.swift; sourceTree = "<group>"; };
-		206F0C4827DE4E4D0055BF0D /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		206F0C4427DE4E050055BF0D /* SwiftUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extension.swift"; sourceTree = "<group>"; };
+		206F0C4627DE4E2B0055BF0D /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
+		206F0C4827DE4E4D0055BF0D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,12 +49,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201298D227F32D10005FC101 /* ASCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		201298C227EF7CD4005FC101 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				201298BA27E4AC2D005FC101 /* FriendRow.swift */,
+				201298C327EF7CE8005FC101 /* FriendsView.swift */,
+				201298BE27E89793005FC101 /* AvatarView.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		201298C927F31736005FC101 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				201298C727F316AA005FC101 /* GroupsView.swift */,
+				201298BC27E4D021005FC101 /* GroupsRow.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		201298CC27F31D35005FC101 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				201298CA27F31C4D005FC101 /* NewsFeedView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		201298CF27F328E0005FC101 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				201298CD27F328D9005FC101 /* Gallery.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
 		206F0C2827DE4AC80055BF0D = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +111,13 @@
 			isa = PBXGroup;
 			children = (
 				206F0C3427DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift */,
-				206F0C4327DE4DD40055BF0D /* LoginScreen */,
+				201298C027EF57E9005FC101 /* AppView.swift */,
+				201298C527F31163005FC101 /* MainView.swift */,
+				206F0C4327DE4DD40055BF0D /* Login */,
+				201298CC27F31D35005FC101 /* News */,
+				201298C227EF7CD4005FC101 /* Friends */,
+				201298C927F31736005FC101 /* Groups */,
+				201298CF27F328E0005FC101 /* Gallery */,
 				206F0C4227DE4DB20055BF0D /* Extensions */,
 				206F0C3A27DE4AC90055BF0D /* Preview Content */,
 				206F0C3827DE4AC90055BF0D /* Assets.xcassets */,
@@ -75,18 +136,18 @@
 		206F0C4227DE4DB20055BF0D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				206F0C4427DE4E050055BF0D /* ExtensionView.swift */,
-				206F0C4627DE4E2B0055BF0D /* ExtensionUIApplication.swift */,
+				206F0C4427DE4E050055BF0D /* SwiftUI+Extension.swift */,
+				206F0C4627DE4E2B0055BF0D /* UIKit+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		206F0C4327DE4DD40055BF0D /* LoginScreen */ = {
+		206F0C4327DE4DD40055BF0D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				206F0C4827DE4E4D0055BF0D /* LoginScreenView.swift */,
+				206F0C4827DE4E4D0055BF0D /* LoginView.swift */,
 			);
-			path = LoginScreen;
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +166,9 @@
 			dependencies = (
 			);
 			name = "GB VK client SwiftUI";
+			packageProductDependencies = (
+				201298D127F32D10005FC101 /* ASCollectionView */,
+			);
 			productName = "GB VK client SwiftUI";
 			productReference = 206F0C3127DE4AC90055BF0D /* GB VK client SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +197,9 @@
 				Base,
 			);
 			mainGroup = 206F0C2827DE4AC80055BF0D;
+			packageReferences = (
+				201298D027F32D10005FC101 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+			);
 			productRefGroup = 206F0C3227DE4AC90055BF0D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,10 +226,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				206F0C4927DE4E4D0055BF0D /* LoginScreenView.swift in Sources */,
-				206F0C4527DE4E050055BF0D /* ExtensionView.swift in Sources */,
-				206F0C4727DE4E2B0055BF0D /* ExtensionUIApplication.swift in Sources */,
+				206F0C4927DE4E4D0055BF0D /* LoginView.swift in Sources */,
+				201298BB27E4AC2D005FC101 /* FriendRow.swift in Sources */,
+				201298CE27F328D9005FC101 /* Gallery.swift in Sources */,
+				201298C827F316AA005FC101 /* GroupsView.swift in Sources */,
+				201298BF27E89793005FC101 /* AvatarView.swift in Sources */,
+				201298C427EF7CE8005FC101 /* FriendsView.swift in Sources */,
+				206F0C4527DE4E050055BF0D /* SwiftUI+Extension.swift in Sources */,
+				201298C127EF57E9005FC101 /* AppView.swift in Sources */,
+				206F0C4727DE4E2B0055BF0D /* UIKit+Extension.swift in Sources */,
 				206F0C3527DE4AC90055BF0D /* GB_VK_client_SwiftUIApp.swift in Sources */,
+				201298CB27F31C4D005FC101 /* NewsFeedView.swift in Sources */,
+				201298BD27E4D021005FC101 /* GroupsRow.swift in Sources */,
+				201298C627F31163005FC101 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +441,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		201298D027F32D10005FC101 /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		201298D127F32D10005FC101 /* ASCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 201298D027F32D10005FC101 /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			productName = ASCollectionView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 206F0C2927DE4AC80055BF0D /* Project object */;
 }
