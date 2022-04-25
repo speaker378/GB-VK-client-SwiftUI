@@ -11,6 +11,11 @@ import ASCollectionView
 struct Gallery: View {
     @ObservedObject var viewModel: PhotoViewModel
     let friend: Friend
+    let columns = [
+        GridItem(.flexible(minimum: 0, maximum: .infinity), spacing: 0, alignment: .center),
+        GridItem(.flexible(minimum: 0, maximum: .infinity), spacing: 0, alignment: .center),
+        GridItem(.flexible(minimum: 0, maximum: .infinity), spacing: 0, alignment: .center),
+    ]
     
     init(viewModel: PhotoViewModel, friend: Friend) {
         self.viewModel = viewModel
@@ -18,15 +23,17 @@ struct Gallery: View {
     }
     
     var body: some View {
-        ASCollectionView(data: viewModel.photos.map { PhotoView(photo: $0) }) { item, _ in
-            item
-        }
-        .layout {
-            .grid(
-                layoutMode: .adaptive(withMinItemSize: 100),
-                itemSpacing: 4,
-                lineSpacing: 4
-            )
+        GeometryReader { geometry in
+            ScrollView(.vertical) {
+                LazyVGrid(columns: columns, spacing: 0) {
+                    if let photos = viewModel.photos {
+                        ForEach(photos) {photo in
+                            PhotoView(photo: photo)
+                                .frame(height: geometry.size.width/3)
+                        }
+                    }
+                }
+            }
         }
         .onAppear {
             viewModel.fetch(userId: friend.id)

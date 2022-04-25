@@ -35,5 +35,5 @@ struct NewsModel: Codable, Identifiable {
 
 struct Attachment: Codable {
     let type: String
-    let photo: Photo?
+    let photo: PhotoModel?
 }

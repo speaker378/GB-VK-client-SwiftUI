@@ -47,7 +47,7 @@ class NetworkService {
     }
     
     // MARK: Photos
-    func getPhotos(userId: Int, completion: @escaping ([Photo]) -> Void) {
+    func getPhotos(userId: Int, completion: @escaping ([PhotoModel]) -> Void) {
         let path = "/method/photos.getAll"
         let params = [
             "owner_id" : "\(userId)",
@@ -58,7 +58,7 @@ class NetworkService {
         request(url: url) { json in
             do {
                 let photos = try JSONDecoder()
-                    .decode(VKResponse<Photo>.self, from: json)
+                    .decode(VKResponse<PhotoModel>.self, from: json)
                 completion(photos.response.items)
             } catch {
                 print(error)
