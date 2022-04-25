@@ -15,17 +15,20 @@ enum Tabs: String {
 
 struct MainView: View {
     @State private var selectedTab: Tabs = .news
+    @StateObject var friendsViewModel = FriendViewModel()
+    @StateObject var newsViewModel = NewsViewModel()
+    @StateObject var groupsViewModel = GroupViewModel()
     
     var body: some View {
         NavigationView {
             TabView(selection: $selectedTab) {
-                NewsFeedView(viewModel: NewsViewModel())
+                NewsFeedView(viewModel: newsViewModel)
                     .tabItem { Label("Новости", systemImage: "newspaper") }
                     .tag(Tabs.news)
-                FriendsView(viewModel: FriendViewModel())
+                FriendsView(viewModel: friendsViewModel)
                     .tabItem { Label("Друзья", systemImage: "person") }
                     .tag(Tabs.friends)
-                GroupsView(viewModel: GroupViewModel())
+                GroupsView(viewModel: groupsViewModel)
                     .tabItem { Label("Группы", systemImage: "person.3") }
                     .tag(Tabs.groups)
             }
