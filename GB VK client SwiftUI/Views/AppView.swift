@@ -9,11 +9,15 @@ import SwiftUI
 
 struct AppView: View {
     @State private var isUserAuth: Bool = false
+    @AppStorage("vkToken") var token: String?
+    
     var body: some View {
-        if isUserAuth {
-            MainView()
+        if isUserAuth || token != nil {
+//            MainView()
+            TabBarCoordinatorView()
         } else {
-            LoginView(isUserAuth: $isUserAuth)
+//            LoginView(isUserAuth: $isUserAuth)
+            VKLoginWebView()
         }
     }
 }

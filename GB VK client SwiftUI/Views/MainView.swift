@@ -19,13 +19,13 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selectedTab) {
-                NewsFeedView()
+                NewsFeedView(viewModel: NewsViewModel())
                     .tabItem { Label("Новости", systemImage: "newspaper") }
                     .tag(Tabs.news)
-                FriendsView()
+                FriendsView(viewModel: FriendViewModel())
                     .tabItem { Label("Друзья", systemImage: "person") }
                     .tag(Tabs.friends)
-                GroupsView()
+                GroupsView(viewModel: GroupViewModel())
                     .tabItem { Label("Группы", systemImage: "person.3") }
                     .tag(Tabs.groups)
             }
