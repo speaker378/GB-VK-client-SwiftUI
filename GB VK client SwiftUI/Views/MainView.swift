@@ -20,19 +20,22 @@ struct MainView: View {
     @StateObject var groupsViewModel = GroupViewModel()
     
     var body: some View {
-        NavigationView {
             TabView(selection: $selectedTab) {
+                NavigationView {
                 NewsFeedView(viewModel: newsViewModel)
-                    .tabItem { Label("Новости", systemImage: "newspaper") }
                     .tag(Tabs.news)
+                }
+                .tabItem { Label("Новости", systemImage: "newspaper") }
+                NavigationView {
                 FriendsView(viewModel: friendsViewModel)
-                    .tabItem { Label("Друзья", systemImage: "person") }
-                    .tag(Tabs.friends)
+                }
+                .tag(Tabs.friends)
+                .tabItem { Label("Друзья", systemImage: "person") }
+                NavigationView {
                 GroupsView(viewModel: groupsViewModel)
-                    .tabItem { Label("Группы", systemImage: "person.3") }
                     .tag(Tabs.groups)
-            }
-            .navigationTitle(selectedTab.rawValue)
+                }
+                .tabItem { Label("Группы", systemImage: "person.3") }
         }
     }
 }

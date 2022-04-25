@@ -18,6 +18,7 @@ struct GroupsView: View {
         List(viewModel.groups) { group in
             GroupsRow(group: group)
         }
+        .navigationTitle("Группы")
         .onAppear {
             viewModel.fetch()
         }

@@ -22,6 +22,7 @@ struct FriendsView: View {
                 FriendRow(friend: friend)
             }
         }
+        .navigationTitle("Друзья")
         .onAppear { viewModel.fetch() }
         .listStyle(.plain)
     }

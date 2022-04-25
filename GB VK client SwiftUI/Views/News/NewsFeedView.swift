@@ -18,6 +18,7 @@ struct NewsFeedView: View {
         List(viewModel.news) { news in
             NewsRow(news: news)
         }
+        .navigationTitle("Новости")
         .listStyle(.plain)
         .onAppear {
             viewModel.fetch()
